@@ -1,0 +1,42 @@
+- id: turn_light_on1
+  alias: lamp aan
+  trigger:
+    entity_id: binary_sensor.sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+    - service: notify.ios_wphone
+      data:
+        "title": "Motion"
+        "message": "Motion detected {{ states.binary_sensor.sensor.state }}"
+#    - service: switch.turn_on
+#      entity_id: switch.neoswitch1_switch
+    - service: scene.turn_on
+      entity_id: scene.romantic
+#    - service: group.set_visibility
+#      entity_id: group.cameras
+#      data:
+#        visible: True
+
+
+- id: turn_light_off1
+  alias: lamp uit
+  trigger:
+    entity_id: binary_sensor.sensor
+    from: 'on'
+    platform: state
+    to: 'off'
+#    for:
+#      minutes: 1
+  action:
+#    - service: notify.ios_wphone
+#      data:
+#        "title": "Motion"
+#        "message": "Motion detected {{ states.binary_sensor.sensor.state }}"
+    - service: switch.turn_off
+      entity_id: switch.neoswitch1_switch
+#    - service: group.set_visibility
+#      entity_id: group.cameras
+#      data:
+#        visible: False

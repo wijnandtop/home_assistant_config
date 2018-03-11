@@ -84,8 +84,6 @@ sun:
 # Weather prediction
 sensor:
   - platform: yr
-  - platform: zoneminder
-    include_archived: false
   - platform: fitbit
     clock_format: 24H
     monitored_resources:
@@ -93,7 +91,6 @@ sensor:
       - "body/bmi"
       - "body/fat"
       - "devices/battery"
-  - platform: cpuspeed
 
 weather:
   - platform: buienradar
@@ -121,12 +118,14 @@ media_player:
     name: Slaapkamer TV
     host: 192.168.1.32
 
-zoneminder:
-  host: 192.168.1.13
-  
 camera:
-  - platform: zoneminder
-  
+  - platform: synology
+    url: !secret synology_url
+    username: !secret synology_username
+    password: !secret synology_password
+    timeout: 15
+    verify_ssl: False
+
 notify:
   - platform: nfandroidtv
     name: Woonkamer TV
