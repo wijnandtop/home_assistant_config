@@ -2,6 +2,7 @@ laundry_wall_switch:
   name: Waskamer muurschakelaar
   view: no
   entities:
+    - light.laundry_wall_switch_level
 #    - sensor.laundry_wall_switch_alarm_level #disabled
 #    - sensor.laundry_wall_switch_alarm_type #disabled
     - sensor.laundry_wall_switch_energy

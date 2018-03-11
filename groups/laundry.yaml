@@ -1,0 +1,28 @@
+laundry:
+  name: Waskamer
+  view: yes
+#  icon: mdi:home
+  entities:
+    - group.laundry_overview
+    - group.laundry_energy
+    - group.laundry_verlichting
+
+laundry_overview:
+  name: Algemeen
+  view: no
+  entities:
+    - sensor.laundry_motion_temperature
+    - binary_sensor.laundry_motion_sensor
+
+laundry_energy:
+  name: Energie
+  view: no
+  entities:
+    - sensor.laundry_wall_switch_power
+    - sensor.laundry_wall_switch_energy
+
+laundry_verlichting:
+  name: Verlichting
+  view: no
+  entities:
+    - light.laundry_wall_switch_level
