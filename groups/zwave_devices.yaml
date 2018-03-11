@@ -1,14 +1,23 @@
-waskamer_muurschakelaar:
-  name: waskamer muurschakelaar
+laundry_wall_switch:
+  name: Waskamer muurschakelaar
   view: no
   entities:
-    - sensor.waskamer_muurschakelaar_alarm_level
-    - sensor.waskamer_muurschakelaar_alarm_type
-    - sensor.waskamer_muurschakelaar_energy
-    - sensor.waskamer_muurschakelaar_exporting
-    - sensor.waskamer_muurschakelaar_heat
-    - sensor.waskamer_muurschakelaar_power
-    - sensor.waskamer_muurschakelaar_power_2
-    - sensor.waskamer_muurschakelaar_power_management
-    - sensor.waskamer_muurschakelaar_sourcenodeid
-    - sensor.waskamer_muurschakelaar_system
+#    - sensor.laundry_wall_switch_alarm_level #disabled
+#    - sensor.laundry_wall_switch_alarm_type #disabled
+    - sensor.laundry_wall_switch_energy
+#    - sensor.laundry_wall_switch_exporting #disabled
+#    - sensor.laundry_wall_switch_heat #disabled
+    - sensor.laundry_wall_switch_power
+#    - sensor.laundry_wall_switch_power_2 #disabled
+#    - sensor.laundry_wall_switch_power_management #disabled
+#    - sensor.laundry_wall_switch_sourcenodeid #disabled
+#    - sensor.laundry_wall_switch_system #disabled
+
+laundry_motion:
+  name: Waskamer beweging
+  view: no
+  entities:
+    - binary_sensor.laundry_motion_sensor
+    - sensor.laundry_motion_temperature
+    - sensor.laundry_motion_luminance
+    - sensor.laundry_motion_general

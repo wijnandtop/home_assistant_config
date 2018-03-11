@@ -386,10 +386,6 @@ sensor.wphone_battery_level_2:
   name:
   platform: ios
   unique_id: level_wphoneios
-media_player.kd55xd8577:
-  name:
-  platform: cast
-  unique_id: e022a01e-4ad8-6f97-f72a-fdc1a5015ac0
 sensor.wpad_battery_state:
   name:
   platform: ios
@@ -402,67 +398,67 @@ media_player.kd55xd8577_2:
   name:
   platform: cast
   unique_id: c6599508-eece-50e3-6db3-eb21707f20c9
-binary_sensor.sensor_2:
-  name:
-  platform: zwave
-  unique_id: 11-72057594227458048
-sensor.fibaro_system_fgms001_motion_sensor_temperature:
-  name:
-  platform: zwave
-  unique_id: 11-72057594227474450
-sensor.fibaro_system_fgms001_motion_sensor_luminance:
-  name:
-  platform: zwave
-  unique_id: 11-72057594227474482
-sensor.fibaro_system_fgms001_motion_sensor_general:
-  name:
-  platform: zwave
-  unique_id: 11-72057594229227521
-light.waskamer_muurschakelaar_level:
-  name:
+light.laundry_wall_switch_level:
+  name: Waskamer plafond lamp
   platform: zwave
   unique_id: 10-72057594210516993
-light.waskamer_muurschakelaar_level_2:
-  name: waskmaer_muurschakelaar Level (unused)
+light.laundry_wall_switch_level_2:
+  name: Waskamer schakelaar level_2  (unused)
   platform: zwave
   unique_id: 10-144115188248444929
-sensor.waskamer_muurschakelaar_power:
-  name:
+sensor.laundry_wall_switch_power:
+  name: Waskamer lamp verbruik
   platform: zwave
   unique_id: 10-72057594210697282
-sensor.waskamer_muurschakelaar_energy:
-  name:
+sensor.laundry_wall_switch_energy:
+  name: Waskamer lamp totaal verbruik
   platform: zwave
   unique_id: 10-72057594210713602
-sensor.waskamer_muurschakelaar_power_2:
-  name:
+sensor.laundry_wall_switch_power_2:
+  name: Waskamer schakelaar power_2
   platform: zwave
   unique_id: 10-72057594210713730
-sensor.waskamer_muurschakelaar_exporting:
-  name:
+sensor.laundry_wall_switch_exporting:
+  name: Waskamer schakelaar exporting
   platform: zwave
   unique_id: 10-72057594210714112
-sensor.waskamer_muurschakelaar_alarm_type:
-  name:
+sensor.laundry_wall_switch_alarm_type:
+  name: Waskamer schakelaar alarm_type
   platform: zwave
   unique_id: 10-72057594211745793
-sensor.waskamer_muurschakelaar_alarm_level:
-  name:
+sensor.laundry_wall_switch_alarm_level:
+  name: Waskamer schakelaar alarm_level
   platform: zwave
   unique_id: 10-72057594211745809
-sensor.waskamer_muurschakelaar_sourcenodeid:
-  name:
+sensor.laundry_wall_switch_sourcenodeid:
+  name: Waskamer schakelaar sourcenodeid
   platform: zwave
   unique_id: 10-72057594211745825
-sensor.waskamer_muurschakelaar_heat:
-  name:
+sensor.laundry_wall_switch_heat:
+  name: Waskamer schakelaar heat
   platform: zwave
   unique_id: 10-72057594211745905
-sensor.waskamer_muurschakelaar_power_management:
-  name:
+sensor.laundry_wall_switch_power_management:
+  name: Waskamer schakelaar power_management
   platform: zwave
   unique_id: 10-72057594211745969
-sensor.waskamer_muurschakelaar_system:
-  name:
+sensor.laundry_wall_switch_system:
+  name: Waskamer schakelaar system
   platform: zwave
   unique_id: 10-72057594211745985
+binary_sensor.laundry_motion_sensor:
+  name: Waskamer beweging sensor
+  platform: zwave
+  unique_id: 11-72057594227458048
+sensor.laundry_motion_temperature:
+  name: Waskamer beweging temperature
+  platform: zwave
+  unique_id: 11-72057594227474450
+sensor.laundry_motion_luminance:
+  name: Waskamer beweging luminance
+  platform: zwave
+  unique_id: 11-72057594227474482
+sensor.laundry_motion_general:
+  name: Waskamer beweging general
+  platform: zwave
+  unique_id: 11-72057594229227521
