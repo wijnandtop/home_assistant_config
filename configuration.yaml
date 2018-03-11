@@ -15,7 +15,7 @@ homeassistant:
 automation: !include_dir_merge_list automations/
 shell_command: !include_dir_merge_named shell_commands/
 panel_iframe: !include_dir_merge_named panel_iframe/
-group: !include groups.yaml
+group: !include_dir_merge_named groups/
 script: !include scripts.yaml
 
 # Show links to resources in log and frontend

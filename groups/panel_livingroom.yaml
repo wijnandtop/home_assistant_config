@@ -1,0 +1,15 @@
+livingroom:
+  name: Woonkamer
+  view: yes
+#  icon: mdi:home
+  entities:
+    - group.gezin
+    # - input_text.media_spotify
+    - group.woonkamer_media
+    # - device_tracker.wphone
+    # - camera.oprit
+    - group.cameras
+    # - media_player.spotify
+    # - group.media
+    - group.woonkamer_lights
+    - group.woonkamer_other

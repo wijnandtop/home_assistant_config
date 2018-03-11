@@ -7,8 +7,11 @@
 !automations
 !shell_commands
 !panel_iframe
+!groups
 !www
 !www/*
+!www/custom_ui
+!www/custom_ui/*
 !README.md
 secrets.yaml
 known_devices.yaml
