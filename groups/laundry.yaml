@@ -19,7 +19,11 @@ laundry_energy:
   view: no
   entities:
     - sensor.laundry_wall_switch_power
+    - sensor.laundry_freezer_power
+    - sensor.laundry_dryer_power
     - sensor.laundry_wall_switch_energy
+    - sensor.laundry_freezer_energy
+    - sensor.laundry_dryer_energy
 
 laundry_verlichting:
   name: Verlichting

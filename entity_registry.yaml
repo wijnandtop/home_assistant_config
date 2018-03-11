@@ -226,78 +226,6 @@ sensor.neo_coolcam_power_plug_12a_interval_8:
   name:
   platform: zwave
   unique_id: 7-72057594160382115
-switch.switch_5:
-  name:
-  platform: zwave
-  unique_id: 8-72057594176946176
-sensor.alarm_type_4:
-  name:
-  platform: zwave
-  unique_id: 8-72057594178191361
-sensor.alarm_level_4:
-  name:
-  platform: zwave
-  unique_id: 8-72057594178191377
-sensor.unknown_3:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159170
-sensor.neo_coolcam_power_plug_12a_power_3:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159298
-sensor.neo_coolcam_power_plug_12a_voltage_3:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159426
-sensor.neo_coolcam_power_plug_12a_current_3:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159490
-sensor.neo_coolcam_power_plug_12a_exporting_3:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159680
-sensor.neo_coolcam_power_plug_12a_sourcenodeid_3:
-  name:
-  platform: zwave
-  unique_id: 8-72057594178191393
-sensor.neo_coolcam_power_plug_12a_power_management_3:
-  name:
-  platform: zwave
-  unique_id: 8-72057594178191537
-sensor.neo_coolcam_power_plug_12a_previous_reading_9:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159186
-sensor.neo_coolcam_power_plug_12a_interval_9:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159203
-sensor.neo_coolcam_power_plug_12a_previous_reading_10:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159314
-sensor.neo_coolcam_power_plug_12a_interval_10:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159331
-sensor.neo_coolcam_power_plug_12a_previous_reading_11:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159442
-sensor.neo_coolcam_power_plug_12a_interval_11:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159459
-sensor.neo_coolcam_power_plug_12a_previous_reading_12:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159506
-sensor.neo_coolcam_power_plug_12a_interval_12:
-  name:
-  platform: zwave
-  unique_id: 8-72057594177159523
 switch.switch_6:
   name:
   platform: zwave
@@ -462,3 +390,95 @@ sensor.laundry_motion_general:
   name: Waskamer beweging general
   platform: zwave
   unique_id: 11-72057594229227521
+switch.laundry_freezer_switch:
+  name: Waskamer diepvries switch
+  platform: zwave
+  unique_id: 8-72057594176946176
+sensor.laundry_freezer_energy:
+  name: Waskamer diepvries energy
+  platform: zwave
+  unique_id: 8-72057594177159170
+sensor.laundry_freezer_previous_reading:
+  name: Waskamer diepvries previous_reading
+  platform: zwave
+  unique_id: 8-72057594177159186
+sensor.laundry_freezer_interval:
+  name: Waskamer diepvries interval
+  platform: zwave
+  unique_id: 8-72057594177159203
+sensor.laundry_freezer_power:
+  name: Waskamer diepvries power
+  platform: zwave
+  unique_id: 8-72057594177159298
+sensor.laundry_freezer_previous_reading_2:
+  name: Waskamer diepvries previous_reading_2
+  platform: zwave
+  unique_id: 8-72057594177159314
+sensor.laundry_freezer_interval_2:
+  name: Waskamer diepvries interval_2
+  platform: zwave
+  unique_id: 8-72057594177159331
+sensor.laundry_freezer_voltage:
+  name: Waskamer diepvries voltage
+  platform: zwave
+  unique_id: 8-72057594177159426
+sensor.laundry_freezer_previous_reading_3:
+  name: Waskamer diepvries previous_reading_3
+  platform: zwave
+  unique_id: 8-72057594177159442
+sensor.laundry_freezer_interval_3:
+  name: Waskamer diepvries interval_3
+  platform: zwave
+  unique_id: 8-72057594177159459
+sensor.laundry_freezer_current:
+  name: Waskamer diepvries current
+  platform: zwave
+  unique_id: 8-72057594177159490
+sensor.laundry_freezer_previous_reading_4:
+  name: Waskamer diepvries previous_reading_4
+  platform: zwave
+  unique_id: 8-72057594177159506
+sensor.laundry_freezer_interval_4:
+  name: Waskamer diepvries interval_4
+  platform: zwave
+  unique_id: 8-72057594177159523
+sensor.laundry_freezer_exporting:
+  name: Waskamer diepvries exporting
+  platform: zwave
+  unique_id: 8-72057594177159680
+sensor.laundry_freezer_alarm_type:
+  name: Waskamer diepvries alarm_type
+  platform: zwave
+  unique_id: 8-72057594178191361
+sensor.laundry_freezer_alarm_level:
+  name: Waskamer diepvries alarm_level
+  platform: zwave
+  unique_id: 8-72057594178191377
+sensor.laundry_freezer_sourcenodeid:
+  name: Waskamer diepvries sourcenodeid
+  platform: zwave
+  unique_id: 8-72057594178191393
+sensor.laundry_freezer_power_management:
+  name: Waskamer diepvries power_management
+  platform: zwave
+  unique_id: 8-72057594178191537
+switch.laundry_dryer_switch:
+  name: Waskamer droger switch
+  platform: zwave
+  unique_id: 12-72057594244055040
+sensor.laundry_dryer_power:
+  name: Waskamer droger power
+  platform: zwave
+  unique_id: 12-72057594244251714
+sensor.laundry_dryer_energy:
+  name: Waskamer droger energy
+  platform: zwave
+  unique_id: 12-72057594244268034
+sensor.laundry_dryer_power_2:
+  name: Waskamer droger power_2
+  platform: zwave
+  unique_id: 12-72057594244268162
+sensor.laundry_dryer_exporting:
+  name: Waskamer droger exporting
+  platform: zwave
+  unique_id: 12-72057594244268544

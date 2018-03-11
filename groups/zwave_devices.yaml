@@ -22,3 +22,36 @@ laundry_motion:
     - sensor.laundry_motion_temperature
     - sensor.laundry_motion_luminance
     - sensor.laundry_motion_general
+
+laundry_freezer:
+  name: Waskamer diepvries
+  view: no
+  entities:
+    - switch.laundry_freezer_switch
+    - sensor.laundry_freezer_energy
+    - sensor.laundry_freezer_previous_reading
+    - sensor.laundry_freezer_interval
+    - sensor.laundry_freezer_power
+    - sensor.laundry_freezer_previous_reading_2
+    - sensor.laundry_freezer_interval_2
+    - sensor.laundry_freezer_voltage
+    - sensor.laundry_freezer_previous_reading_3
+    - sensor.laundry_freezer_interval_3
+    - sensor.laundry_freezer_current
+    - sensor.laundry_freezer_previous_reading_4
+    - sensor.laundry_freezer_interval_4
+    - sensor.laundry_freezer_exporting
+    - sensor.laundry_freezer_alarm_type
+    - sensor.laundry_freezer_alarm_level
+    - sensor.laundry_freezer_sourcenodeid
+    - sensor.laundry_freezer_power_management
+
+laundry_dryer:
+  name: Waskamer droger
+  view: no
+  entities:
+    - switch.laundry_dryer_switch
+    - sensor.laundry_dryer_power
+    - sensor.laundry_dryer_energy
+    - sensor.laundry_dryer_power_2
+    - sensor.laundry_dryer_exporting
