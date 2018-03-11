@@ -1,42 +1,28 @@
-- id: turn_light_on1
-  alias: lamp aan
+- id: laundy_ceilinglight_on
+  alias: Waskamer lamp aan
   trigger:
-    entity_id: binary_sensor.sensor
+    entity_id: binary_sensor.laundry_motion_sensor
     from: 'off'
     platform: state
     to: 'on'
   action:
     - service: notify.ios_wphone
       data:
-        "title": "Motion"
-        "message": "Motion detected {{ states.binary_sensor.sensor.state }}"
-#    - service: switch.turn_on
-#      entity_id: switch.neoswitch1_switch
-    - service: scene.turn_on
-      entity_id: scene.romantic
-#    - service: group.set_visibility
-#      entity_id: group.cameras
-#      data:
-#        visible: True
+        "title": "Beweging"
+        "message": "Waskamer {{ states.binary_sensor.sensor.state }}"
+    - service: light.turn_on
+      entity_id: light.laundry_wall_switch_level
 
 
-- id: turn_light_off1
-  alias: lamp uit
+- id: laundy_ceilinglight_off
+  alias: Waskamer lamp uit
   trigger:
-    entity_id: binary_sensor.sensor
+    entity_id: binary_sensor.laundry_motion_sensor
     from: 'on'
     platform: state
     to: 'off'
-#    for:
-#      minutes: 1
+    for:
+      minutes: 1
   action:
-#    - service: notify.ios_wphone
-#      data:
-#        "title": "Motion"
-#        "message": "Motion detected {{ states.binary_sensor.sensor.state }}"
-    - service: switch.turn_off
-      entity_id: switch.neoswitch1_switch
-#    - service: group.set_visibility
-#      entity_id: group.cameras
-#      data:
-#        visible: False
+    - service: light.turn_off
+      entity_id: light.laundry_wall_switch_level

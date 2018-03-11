@@ -3,16 +3,16 @@ laundry_wall_switch:
   view: no
   entities:
     - light.laundry_wall_switch_level
-#    - sensor.laundry_wall_switch_alarm_level #disabled
-#    - sensor.laundry_wall_switch_alarm_type #disabled
+    - sensor.laundry_wall_switch_alarm_level #disabled
+    - sensor.laundry_wall_switch_alarm_type #disabled
     - sensor.laundry_wall_switch_energy
-#    - sensor.laundry_wall_switch_exporting #disabled
-#    - sensor.laundry_wall_switch_heat #disabled
+    - sensor.laundry_wall_switch_exporting #disabled
+    - sensor.laundry_wall_switch_heat #disabled
     - sensor.laundry_wall_switch_power
-#    - sensor.laundry_wall_switch_power_2 #disabled
-#    - sensor.laundry_wall_switch_power_management #disabled
-#    - sensor.laundry_wall_switch_sourcenodeid #disabled
-#    - sensor.laundry_wall_switch_system #disabled
+    - sensor.laundry_wall_switch_power_2 #disabled
+    - sensor.laundry_wall_switch_power_management #disabled
+    - sensor.laundry_wall_switch_sourcenodeid #disabled
+    - sensor.laundry_wall_switch_system #disabled
 
 laundry_motion:
   name: Waskamer beweging
