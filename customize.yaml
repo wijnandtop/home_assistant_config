@@ -1,0 +1,37 @@
+# binary_sensor.neoswitch1_sensor:
+#   friendly_name: Beweging zolder
+#   device_class: motion
+  
+input_text.media_spotify:
+  icon: mdi:cast
+  custom_ui_state_card: state-card-mini-media-player
+  config:
+    player: media_player.spotify
+    buttons:
+      # - name: Main
+      #   icon: mdi:music-note
+      #   script: script.play_rautemusik_main
+      # - name: Rock
+      #   icon: mdi:music-note
+      #   script: script.play_rautemusik_rock
+input_text.media_woonkamertv:
+  icon: mdi:cast
+  custom_ui_state_card: state-card-mini-media-player
+  config:
+    player: media_player.woonkamertv
+    buttons:
+
+input_text.media_soundbar_woonkamer:
+  icon: mdi:cast
+  custom_ui_state_card: state-card-mini-media-player
+  config:
+    player: media_player.soundbar_woonkamer
+    buttons:
+      
+input_text.media_chromecast_woonkamer:
+  icon: mdi:cast
+  custom_ui_state_card: state-card-mini-media-player
+  config:
+    player: media_player.kd55xd8577
+    buttons:
+

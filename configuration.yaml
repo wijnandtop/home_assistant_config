@@ -1,0 +1,204 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 0
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Amsterdam
+  # Customization file
+  customize: !include customize.yaml
+automation: !include_dir_merge_list automations/
+shell_command: !include_dir_merge_named shell_commands/
+panel_iframe: !include_dir_merge_named panel_iframe/
+group: !include groups.yaml
+script: !include scripts.yaml
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+#mini players
+  extra_html_url:
+    - /local/custom_ui/state-card-mini-media-player.html
+  extra_html_url_es5:
+    - /local/custom_ui/state-card-mini-media-player_es5.html
+    
+input_text:
+  media_spotify:
+    name: Spotify
+  media_woonkamertv:
+    name: Woonkamer TV
+  media_soundbar_woonkamer:
+    name: Woonkamer soundbar
+  media_chromecast_woonkamer:
+    name: Woonkamer chromecast
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+#  base_url: assistant.home.wijnand.top:443
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# Tracked history is kept for 10 days
+recorder:
+  purge_interval: 2
+  purge_keep_days: 30
+  db_url: !secret db_connection_string
+  
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor:
+  - platform: yr
+  - platform: zoneminder
+    include_archived: false
+  - platform: fitbit
+    clock_format: 24H
+    monitored_resources:
+      - "body/weight"
+      - "body/bmi"
+      - "body/fat"
+      - "devices/battery"
+  - platform: cpuspeed
+
+weather:
+  - platform: buienradar
+  
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+
+media_player:
+  - platform: braviatv
+    name: Woonkamer TV
+    host: 192.168.1.26
+  - platform: spotify
+    client_id: 7ad666bc74af45cdb3d91a8683f0baaa
+    client_secret: !secret spotify_client_secret
+  - platform: cast
+  - platform: philips_js
+    name: Keuken TV
+    host: 192.168.1.37
+  - platform: philips_js
+    name: Slaapkamer TV
+    host: 192.168.1.32
+
+zoneminder:
+  host: 192.168.1.13
+  
+camera:
+  - platform: zoneminder
+  
+notify:
+  - platform: nfandroidtv
+    name: Woonkamer TV
+    host: 192.168.1.26
+
+zwave:
+  usb_path: /dev/ttyACM0
+
+ios:
+
+zone:
+  - name: Praktijk
+    latitude: 52.026944
+    longitude: 5.542693
+    radius: 200
+    icon: mdi:domain
+    track_ios: true
+
+  - name: ING
+    latitude: 52.314145
+    longitude: 4.946939
+    icon: mdi:domain
+    radius: 1000
+    track_ios: true
+
+  # This will override the default home zone
+  - name: Home
+    latitude: !secret home_latitude
+    longitude: !secret home_longitude
+    radius: 200
+    icon: mdi:home-heart
+    track_ios: true
+
+scene:
+  - name: Romantic
+    entities:
+      switch.neoswitch1_switch: on
+
+cover:
+  - platform: template
+    covers:
+      curtains_bedroom:
+        friendly_name: "Slaapkamer gordijnen"
+        value_template:  "{{ states.switch.neoswitch1_switch.state == 'on' }}"
+        open_cover:
+          service: switch.turn_on
+          entity_id: switch.neoswitch1_switch
+        close_cover:
+          service: switch.turn_off
+          entity_id: switch.neoswitch1_switch
+        icon_template: >-
+          {% if states.switch.neoswitch1_switch.state == 'on' %}
+            mdi:garage-open
+          {% else %}
+            mdi:garage
+          {% endif %}
+
+light:
+  - platform: template
+    lights:
+      switch_light:
+        friendly_name: "Switch light"
+        value_template: "{{ states.switch.neoswitch1_switch.state == 'on' }}"
+        turn_on:
+          service: switch.turn_on
+          entity_id: switch.neoswitch1_switch
+        turn_off:
+          service: switch.turn_off
+          entity_id: switch.neoswitch1_switch
+
+history_graph:
+  home_energy:
+    entities:
+      - switch.switch_4
+      - sensor.neo_coolcam_power_plug_12a_power_2

@@ -1,0 +1,84 @@
+gezin:
+  name: Wijnand
+  view: no
+  entities:
+    - device_tracker.wphone
+    - sensor.wphone_battery_level
+    - sensor.wphone_battery_state
+    - sensor.weight
+    
+media:
+  name: woonkamer media
+#  control: hidden
+  view: no
+  entities:
+
+woonkamer_lights:
+  name: Woonkamer verlichting
+  view: no
+  entities:
+    - light.switch_light
+    - light.tv_spots
+    - light.woonkamer_kast
+    - light.woonkamer_plafond
+
+woonkamer_other:
+  name: Woonkamer overig
+  view: no
+  entities:
+    - switch.neoswitch1_switch
+    - cover.curtains_bedroom
+    - switch.switch_2
+    - sensor.neo_coolcam_power_plug_12a_power
+    - sensor.neo_coolcam_power_plug_12a_power_2
+#    - states.switch.switch_4.power_consumption
+    - binary_sensor.sensor
+
+    
+woonkamer_media:
+  name: Woonkamer media
+  view: no
+  entities:
+#    - input_text.media_spotify
+    - input_text.media_woonkamertv
+    - input_text.media_soundbar_woonkamer
+    - input_text.media_chromecast_woonkamer
+
+    
+cameras:
+  name: Cameras
+  control: hidden
+  view: no
+  entities:
+    - camera.oprit
+    - camera.schuur
+page1:
+  name: experiment
+  view: yes
+#  icon: mdi:home
+  entities:
+    - group.gezin
+    # - input_text.media_spotify
+    - group.woonkamer_media
+    # - device_tracker.wphone
+    # - camera.oprit
+    - group.cameras
+    # - media_player.spotify
+    # - group.media
+    - group.woonkamer_lights
+    - group.woonkamer_other
+
+waskamer_muurschakelaar:
+  name: waskamer muurschakelaar
+  view: no
+  entities:
+    - sensor.waskamer_muurschakelaar_alarm_level
+    - sensor.waskamer_muurschakelaar_alarm_type
+    - sensor.waskamer_muurschakelaar_energy
+    - sensor.waskamer_muurschakelaar_exporting
+    - sensor.waskamer_muurschakelaar_heat
+    - sensor.waskamer_muurschakelaar_power
+    - sensor.waskamer_muurschakelaar_power_2
+    - sensor.waskamer_muurschakelaar_power_management
+    - sensor.waskamer_muurschakelaar_sourcenodeid
+    - sensor.waskamer_muurschakelaar_system

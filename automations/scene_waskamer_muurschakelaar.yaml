@@ -1,0 +1,98 @@
+- id: waskamer_muurschakelaar_right_tripple_click
+  alias: right tripple click
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      object_id: waskamer_muurschakelaar
+      scene_id: 25
+  action:
+    - service: notify.ios_wphone
+      data:
+        "title": "waskamer"
+        "message": "right 3x click"
+
+- id: waskamer_muurschakelaar_right_dubble_click
+  alias: right dubble click
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      object_id: waskamer_muurschakelaar
+      scene_id: 24
+  action:
+    - service: notify.ios_wphone
+      data:
+        "title": "waskamer"
+        "message": "right 2x click"
+
+- id: waskamer_muurschakelaar_right_single_click
+  alias: right single click
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      object_id: waskamer_muurschakelaar
+      scene_id: 26
+  action:
+    - service: notify.ios_wphone
+      data:
+        "title": "waskamer"
+        "message": "right 1x click"
+
+
+- id: waskamer_muurschakelaar_left_tripple_click
+  alias: left tripple click
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      object_id: waskamer_muurschakelaar
+      scene_id: 15
+  action:
+    - service: notify.ios_wphone
+      data:
+        "title": "waskamer"
+        "message": "left 3x click"
+
+- id: waskamer_muurschakelaar_left_dubble_click
+  alias: left dubble click
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      object_id: waskamer_muurschakelaar
+      scene_id: 14
+  action:
+    - service: notify.ios_wphone
+      data:
+        "title": "waskamer"
+        "message": "left 2x click"
+
+- id: waskamer_muurschakelaar_left_single_click
+  alias: left single click
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      object_id: waskamer_muurschakelaar
+      scene_id: 16
+  action:
+    - service: notify.ios_wphone
+      data:
+        "title": "waskamer"
+        "message": "left 1x click"
+
+- id: waskamer_muurschakelaar_left_hold
+  alias: left hold
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      object_id: waskamer_muurschakelaar
+      scene_id: 12
+  action:
+    - service: notify.ios_wphone
+      data:
+        "title": "waskamer"
+        "message": "left hold"

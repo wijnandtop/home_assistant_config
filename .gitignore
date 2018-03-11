@@ -1,0 +1,15 @@
+*
+!*.yaml
+!scenes
+!.gitignore
+!python_scripts/*
+!python_scripts
+!automations
+!shell_commands
+!panel_iframe
+!www
+!www/*
+!README.md
+secrets.yaml
+known_devices.yaml
+www/z-wave-graph.json
