@@ -1,0 +1,47 @@
+
+#- platform: gardena_smart
+#  username : !secret gardena_user
+#  password : !secret gardena_password
+#- platform: template
+#  sensors:
+#    sileno_battery_level:
+#      friendly_name: "Sileno Battery Level"
+#      value_template: "{{ states.sensor.greet.attributes.battery_level }}"
+#      unit_of_measurement: '%'
+#    sileno_charge_cycles:
+#      friendly_name: "Sileno charge cycles"
+#      value_template: "{{ states.sensor.greet.attributes.charge_cycles }}"
+#      unit_of_measurement: ''
+#    sileno_collisions:
+#      friendly_name: "Sileno number of collisions"
+#      value_template: "{{ states.sensor.greet.attributes.collisions }}"
+#      unit_of_measurement: ''
+#    sileno_cutting_time:
+#      friendly_name: "Sileno total_cutting time"
+#      value_template: "{{ states.sensor.greet.attributes.cutting_time }}"
+#      unit_of_measurement: hours
+#    sileno_error:
+#      friendly_name: "Sileno error"
+#      value_template: "{{ states.sensor.greet.attributes.error }}"
+#    sileno_error_time:
+#      friendly_name: "Sileno error time"
+#      value_template: "{{ states.sensor.greet.attributes.error_time }}"
+#    sileno_next_start_time:
+#      friendly_name: "Sileno next start time"
+#      value_template: "{{ states.sensor.greet.attributes.next_start }}"
+#    sileno_next_start_source:
+#      friendly_name: "Sileno start source"
+#      value_template: "{{ states.sensor.greet.attributes.next_source_for_start }}"
+- platform: yr
+#- platform: fitbit
+#  clock_format: 24H
+#  monitored_resources:
+#    - "body/weight"
+#    - "body/bmi"
+#    - "body/fat"
+#    - "devices/battery"
+- platform: template
+  sensors:
+    laundry_dryer_on:
+#        name: Waskamer droger actief
+      value_template: "{{ states('sensor.laundry_dryer_power') | int > 4 }}"

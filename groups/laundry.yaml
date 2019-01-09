@@ -13,6 +13,7 @@ laundry_overview:
   entities:
     - sensor.laundry_motion_temperature
     - binary_sensor.laundry_motion_sensor
+    - sensor.laundry_dryer_on
 
 laundry_energy:
   name: Energie

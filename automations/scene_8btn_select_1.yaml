@@ -1,0 +1,13 @@
+- id: scene_8btn_select_1_button_1
+  alias: Button 1
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      object_id: zwave.8btn_select_1
+      scene_id: 1
+  action:
+    - service: notify.ios_wphone
+      data:
+        "title": "Scene button pressed"
+        "message": "Scene 1"

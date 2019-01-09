@@ -9,7 +9,7 @@
     - service: notify.ios_wphone
       data:
         "title": "Beweging"
-        "message": "Waskamer {{ states.binary_sensor.sensor.state }}"
+        "message": "Waskamer beweging"
     - service: light.turn_on
       entity_id: light.laundry_wall_switch_level
 
@@ -26,3 +26,27 @@
   action:
     - service: light.turn_off
       entity_id: light.laundry_wall_switch_level
+
+- id: notice_laundry_dryer_on
+  alias: Dryer On
+  trigger:
+    platform: state
+    entity_id: sensor.laundry_dryer_on
+    to: 'True'
+  action:
+    - service: notify.ios_wphone
+      data:
+        "title": "Waskamer"
+        "message": "Droger aan"
+
+- id: notice_laundry_dryer_off
+  alias: Dryer Off
+  trigger:
+    platform: state
+    entity_id: sensor.laundry_dryer_on
+    to: 'False'
+  action:
+    - service: notify.ios_wphone
+      data:
+        "title": "Waskamer"
+        "message": "Droger klaar"

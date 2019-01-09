@@ -5,6 +5,8 @@
 !python_scripts/*
 !python_scripts
 !automations
+!panels
+!themes
 !shell_commands
 !panel_iframe
 !groups
@@ -13,6 +15,8 @@
 !www/custom_ui
 !www/custom_ui/*
 !README.md
+!ui-lovelace.yaml
+!zwcfg_0xc1e54ab7.xml
 secrets.yaml
 known_devices.yaml
 www/z-wave-graph.json
