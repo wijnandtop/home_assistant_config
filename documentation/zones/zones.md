@@ -1,11 +1,13 @@
 #Woonkamer
 
 ##devices
+* Thermostaat
 * Gordijnen
 * Plafond lampen
 * Sony TV
 * Bose Soundbar
 * Sfeer verlichting
+* Stofzuiger
 
 ##Scenes
 ###Day
@@ -72,10 +74,56 @@
 * Verlichting uit
 * Nacht scene aan 
 
-#Keuken
+#Keuken/Eethoek
+
+##Devices
+* Verlichting (diversen)
+* blinds (niet aanwezig)
+
+##Scene's
+###Dag
+###Avond
+###Koken
+###Nacht
+
 #Kantoor
+###Devices
+* Themostaat
+* Verlichting diversen
+* Camera ingang
+
+##Scenes
+###Aanwezig gepland
+* temperatuur hoog
+* verlichting uit
+
+###Afwezig
+* temperatuur laag
+* verlichting uit
+
+###Control
+* temperatuur
+* Verlichting aan/uit
+
 #Kelder
-#Eethoek
+###Devices
+* thermostaat
+* verlichting
+
+
+##Scenes
+###Aanwezig gepland
+* temperatuur hoog
+* verlichting uit
+
+###Afwezig
+* temperatuur laag
+* verlichting uit
+
+###Control
+* temperatuur
+* Verlichting aan/uit
+
 #Slaapkamer
 #Kinderkamer 1
 #Kinderkamer 2
