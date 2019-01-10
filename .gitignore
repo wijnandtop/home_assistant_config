@@ -17,6 +17,7 @@
 !README.md
 !ui-lovelace.yaml
 !zwcfg_0xc1e54ab7.xml
+!documentation/*
 secrets.yaml
 known_devices.yaml
 www/z-wave-graph.json
